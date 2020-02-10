@@ -1,20 +1,13 @@
-# insertion sort
+# bubble sort with scatter graph
 from matplotlib import pyplot as plt
 from matplotlib.animation import FuncAnimation
-#from matplotlib import rcParams
 import random
-import time
 
-start = time.clock()
-# Setting color parameters
-# rcParams['figure.facecolor'] = 'black'
-# rcParams['axes.facecolor'] = 'black'
-# rcParams['axes.labelcolor'] = 'white'
+data_size = 30
+data = random.sample(range(data_size), data_size)
+x = list(range(len(data)))
 
 fig = plt.figure()
-
-data = random.sample(range(100), 100)
-x = list(range(len(data)))
 
 comparisons = 0
 
@@ -35,15 +28,15 @@ def bubbleSort(fi):
                     comparisons += 1
 
                     # Return plot
-                    return plt.scatter(x, data, c=data, cmap='gist_rainbow'), plt.xlabel(
-                        'Data size:50, {} comparisons'.format(comparisons))
+                    return plt.scatter(x, data, c=data, cmap='nipy_spectral'), plt.xlabel(
+                        'Data size:{}, {} comparisons'.format(data_size,comparisons))
 
 
-ani = FuncAnimation(fig, bubbleSort, frames=10, interval=1)
+ani = FuncAnimation(fig, bubbleSort, frames=250, interval=1)
 
-ani.save('scatter_bubblesort.gif', dpi=80, writer='imagemagick')
+# To save the plot as gif install imagemagick
+#ani.save('scatter_bubblesort.gif', dpi=80, writer='imagemagick')
 
 plt.show()
 
-print (time.clock() - start)
 print(data)

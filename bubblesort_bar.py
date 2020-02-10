@@ -13,21 +13,24 @@ fig = plt.figure()
 comparisons = 0
 
 def bubbleSort(fi):
-
+    # Run throught all data elements
     for l in range(len(data)):
+        # Compare all elements
         for i, n in enumerate(data):
             if i < (len(data)) - 1:
+                # Change the color of the bars
                 colors = list(len(data) * 'b')
                 colors[i] = 'r'
 
                 if n > data[i + 1]:
                     data[i] = data[i + 1]
                     data[i + 1] = n
+
                     plt.cla()
 
                     global comparisons
                     comparisons += 1
-
+                    # Return plot
                     return plt.bar(x, data, color=colors), plt.xlabel('{} comparisons'.format(comparisons))
 
 

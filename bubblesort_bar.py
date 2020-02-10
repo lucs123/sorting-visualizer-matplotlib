@@ -33,7 +33,7 @@ def bubbleSort(fi):
                     return plt.bar(x, data, color=colors), plt.xlabel(
                         'Data size{}, {} comparisons'.format(data_size, comparisons))
 
-
+# Change the number of frames accordingly to data size
 ani = FuncAnimation(fig, bubbleSort, frames=250, interval=1)
 
 # To save the plot as gif install imagemagick

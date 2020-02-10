@@ -31,10 +31,10 @@ def bubbleSort(fi):
                     return plt.scatter(x, data, c=data, cmap='nipy_spectral'), plt.xlabel(
                         'Data size:{}, {} comparisons'.format(data_size,comparisons))
 
-
+# Change the number of frames accordingly to data size
 ani = FuncAnimation(fig, bubbleSort, frames=250, interval=1)
 
-# To save the plot as gif install imagemagick
+# To save the plot as a gif install imagemagick
 #ani.save('scatter_bubblesort.gif', dpi=80, writer='imagemagick')
 
 plt.show()

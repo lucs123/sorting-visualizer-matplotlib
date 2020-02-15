@@ -1,5 +1,5 @@
 # bubble sort with bar graph
-from animate import graph
+from animate import Plot
 
 def bubbleSort(data):
     # Run throught all data elements
@@ -13,5 +13,5 @@ def bubbleSort(data):
                     data[i] = data[i + 1]
                     data[i + 1] = n
 
-                    graph(i+1, data)
+                    Plot(i + 1, data)
 

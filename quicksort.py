@@ -3,7 +3,7 @@
 # array, and places all smaller (smaller than pivot)
 # to left of pivot and all greater elements to right
 # of pivot
-from animate import graph
+from animate import Plot
 
 def partition(arr, low, high):
     i = (low - 1)  # index of smaller element
@@ -17,7 +17,7 @@ def partition(arr, low, high):
             # increment index of smaller element
             i = i + 1
             arr[i], arr[j] = arr[j], arr[i]
-            graph(high,arr)
+            Plot(high, arr)
 
 
     arr[i + 1], arr[high] = arr[high], arr[i + 1]

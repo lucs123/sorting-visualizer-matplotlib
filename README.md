@@ -1,9 +1,12 @@
 # Matplotlib sorting visualizer
 Scripts to visualize sorting algorithms using matplotlib animations
-### Bubblesort with bar graph
-![](/gifs/bar_bubblesort.gif)
-### Bubblesort with dots
-![](/gifs/scatter_bubblesort.gif)
+### Bar graph
+<img align="left" width="100" height="100" src="gifs/bubblesort_bar2.gif">
+<img align="right" width="100" height="100" src="gifs/quicksort_bar.gif">
+
+### Scatter graph
+<img align="left" width="100" height="100" src="gifs/bubblesort_scatter2.gif">
+<img align="right" width="100" height="100" src="gifs/quicksort_scatter.gif">
 
 ## About
 This project aims to make sorting algorithms easier to visualize and understand, it is a series of standalone scripts so there's

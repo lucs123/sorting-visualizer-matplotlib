@@ -1,45 +1,29 @@
+# Code made by WilliamHYZhang, source:https://github.com/TheAlgorithms/Python/blob/master/sorts/heap_sort.py
 from animate import Plot
 
 # To heapify subtree rooted at index i.
 # n is size of heap
-def heapify(data, n, i):
-    largest = i  # Initialize largest as root
-    l = 2 * i + 1  # left = 2*i + 1
-    r = 2 * i + 2  # right = 2*i + 2
+def heapify(unsorted, index, heap_size):
+    largest = index
+    left_index = 2 * index + 1
+    right_index = 2 * index + 2
+    if left_index < heap_size and unsorted[left_index] > unsorted[largest]:
+        largest = left_index
 
-    # See if left child of root exists and is
-    # greater than root
-    if l < n and data[i] < data[l]:
-        largest = l
+    if right_index < heap_size and unsorted[right_index] > unsorted[largest]:
+        largest = right_index
 
-        # See if right child of root exists and is
-    # greater than root
-    if r < n and data[largest] < data[r]:
-        largest = r
+    if largest != index:
+        unsorted[largest], unsorted[index] = unsorted[index], unsorted[largest]
+        heapify(unsorted, largest, heap_size)
+        Plot(largest,unsorted)
 
-        # Change root, if needed
-    if largest != i:
-        data[i], data[largest] = data[largest], data[i]  # swap
+def heapSort(unsorted):
 
-        # Heapify the root.
-        heapify(data, n, largest)
-        Plot(i, data)
-    # The main function to sort an array of given size
-
-
-def heapSort(data):
-    global i
-    n = len(data)
-
-    # Build a maxheap.
-    for i in range(n, -1, -1):
-        heapify(data, n, i)
-
-        # One by one extract elements
+    n = len(unsorted)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(unsorted, i, n)
     for i in range(n - 1, 0, -1):
-        data[i], data[0] = data[0], data[i]  # swap
-        heapify(data, i, 0)
-
-
-
-
+        unsorted[0], unsorted[i] = unsorted[i], unsorted[0]
+        heapify(unsorted, 0, i)
+    return unsorted

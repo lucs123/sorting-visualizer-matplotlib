@@ -1,7 +1,8 @@
 import random
 from quicksort import quickSort
 from bubblesort import bubbleSort
-from animate import camera, alg_name, graph_name, graphs
+from heapsort import heapSort
+from animate import camera, alg_title, graph_title, graphs
 import matplotlib.pyplot as plt
 
 try:
@@ -12,32 +13,34 @@ except ValueError:
 data = random.sample(range(data_size), data_size)
 
 algorithms = {'1': bubbleSort,
-              '2': quickSort}
+              '2': quickSort,
+              '3': heapSort}
 
-i = input('Select the algorithm(1 for bubbleSort, 2 for quickSort):')
-if i not in algorithms:
-    i = '2'
+alg = input('Select the algorithm(1 for bubbleSort, 2 for quickSort, 3 for heapSort):')
+if alg not in algorithms:
+    alg = '2'
 
-g = input('Select the graphic(1 for bar, 2 for scatter):')
-if g not in graphs:
-    g = '1'
+gph = input('Select the graph(1 for bar, 2 for scatter):')
+if gph not in graphs:
+    gph = '1'
 
-save = input('Do you want to save the graph(y|n):')
+save = input('Do you wanna save(y|n):')
 if save == 'y':
     save = True
 
-graph_name(g)
-alg_name(i)
+graph_title(gph)
+alg_title(alg)
 
-func = algorithms[i]
+func = algorithms[alg]
 
 if func == quickSort:
     func(data, 0, len(data) - 1)
-elif func == bubbleSort:
+elif func == bubbleSort or heapSort:
     func(data)
 
 animation = camera.animate()
 
+# To save as gif install imagemagick, to save as mp4 install ffmpeg(if not already installed)
 if save:
     #animation.save('animation.gif', dpi=60, writer='imagemagick')
     animation.save('animation.mp4')

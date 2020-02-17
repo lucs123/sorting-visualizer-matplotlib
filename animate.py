@@ -6,22 +6,23 @@ camera = Camera(fig)
 comparisons = 0
 
 titles = {'1': "Bubblesort algorithm",
-          '2': 'Quicksort algorithm'}
-title = ''
+          '2': 'Quicksort algorithm',
+          '3': 'Heapsort algorithm'}
 
 graphs = {'1': plt.bar,
           '2': plt.scatter}
 
-def alg_name(alg):
+def alg_title(alg):
     global title
     title = titles[alg]
     return title
 
-def graph_name(gph):
+def graph_title(gph):
     global graph
     graph = graphs[gph]
     return graph
 
+# Plot data set and variable to highlight
 def Plot(highlight, data):
     x = list(range(len(data)))
     global comparisons

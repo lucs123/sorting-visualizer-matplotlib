@@ -17,18 +17,25 @@ def alg_name(alg):
     title = titles[alg]
     return title
 
-def graph(gph):
+def graph_name(gph):
     global graph
     graph = graphs[gph]
     return graph
 
 def Plot(highlight, data):
-    colors = list(len(data) * 'b')
-    colors[highlight] = 'g'
     x = list(range(len(data)))
     global comparisons
     comparisons += 1
+
+    if graph == plt.bar:
+        colors = list(len(data) * 'b')
+        colors[highlight] = 'r'
+        graph(x, data, color=colors)
+
+    if graph == plt.scatter:
+        graph(x, data, c=data, cmap='nipy_spectral')
+
     plt.title(title)
     plt.xlabel('Data size:{}, Number of comparisons:{}'.format(len(data), comparisons))
-    graph(x, data, color=colors)
+
     camera.snap()

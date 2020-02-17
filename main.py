@@ -1,7 +1,7 @@
 import random
 from quicksort import quickSort
 from bubblesort import bubbleSort
-from animate import camera, alg_name, graph, graphs
+from animate import camera, alg_name, graph_name, graphs
 import matplotlib.pyplot as plt
 
 try:
@@ -26,7 +26,7 @@ save = input('Do you want to save the graph(y|n):')
 if save == 'y':
     save = True
 
-graph(g)
+graph_name(g)
 alg_name(i)
 
 func = algorithms[i]
@@ -39,6 +39,7 @@ elif func == bubbleSort:
 animation = camera.animate()
 
 if save:
-    animation.save('animation.gif', dpi=80, writer='imagemagick')
+    #animation.save('animation.gif', dpi=60, writer='imagemagick')
+    animation.save('animation.mp4')
 
 plt.show()

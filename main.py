@@ -38,7 +38,8 @@ if func == quickSort:
 elif func == bubbleSort or heapSort:
     func(data)
 
-animation = camera.animate()
+interval_time = 20
+animation = camera.animate(interval=interval_time)
 
 # To save as gif install imagemagick, to save as mp4 install ffmpeg(if not already installed)
 if save:

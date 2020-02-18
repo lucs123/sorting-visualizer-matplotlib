@@ -9,16 +9,30 @@ Scripts to visualize sorting algorithms using matplotlib animations
 ![](gifs/quicksort_scatter.gif)
 
 ## Algorithms available
-|Algorithm    | Best case | Worst case | Average case
-|-------------|-----------|------------|---------------
-|Bubble sort  | O(n)      |     O(n2)  |O(n^2)       |
-|Quick sort   |           |            |
-|Heap sort    |           |            |
+- Bubble sort
+- Quick sort
+- Heap sort
 
 ## About
-This project aims to make sorting algorithms easier to visualize and understand, it is a series of standalone scripts so there's
-some repeated code in them.  
-It's still at early development so there is only bubblesort algoritm at the moment, more algorithms will be added.
+The aim of this project is to make sorting algorithms easier to visualize and understand, using the animation capabilities of matplotlib.  
+
 ### Dependencies
+- Python 3.6+
 - Matplotlib
-- Image magick(Only needed to save as gif, graph can also be saved as mp4)
+- Celluloid module(https://github.com/jwkvam/celluloid)
+- Image magick to save as gif or ffmpeg to save as mp4
+
+### Manual
+- Install requirements
+
+`pip install -r requirements.txt`
+
+- Run main.py
+
+`python main.py`
+
+- Select Data size(default 30)
+- Select the algorithm(defaut is quicksort)
+- Select the type of graph(defaut bar graph)
+- Choose if you want to save
+

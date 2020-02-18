@@ -33,8 +33,15 @@ The aim of this project is to make sorting algorithms easier to visualize and un
 
 `python main.py`
 
+0. (To run with defaut values just press enter)
 1. Select Data size(default 30)
 2. Select the algorithm(defaut is quicksort)
 3. Select the type of graph(defaut bar graph)
 4. Choose if you want to save
 
+### How to contribute
+1. Put new algorithm on root
+1. Import Plot from animate
+1. Use Plot function in algorithm function
+1. Add algorithm to algorithms in main file
+1. Add algorithm title in animate file

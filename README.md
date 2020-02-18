@@ -8,6 +8,13 @@ Scripts to visualize sorting algorithms using matplotlib animations
 ![](gifs/bubblesort_scatter2.gif)
 ![](gifs/quicksort_scatter.gif)
 
+## Algorithms available
+|Algorithm    | Best case | Worst case | Average case
+|-------------|-----------|------------|---------------
+|Bubble sort  | O(n)      |     O(n2)  |O(n^2)       |
+|Quick sort   |           |            |
+|Heap sort    |           |            |
+
 ## About
 This project aims to make sorting algorithms easier to visualize and understand, it is a series of standalone scripts so there's
 some repeated code in them.  

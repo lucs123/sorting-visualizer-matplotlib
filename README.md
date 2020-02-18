@@ -23,16 +23,18 @@ The aim of this project is to make sorting algorithms easier to visualize and un
 - Image magick to save as gif or ffmpeg to save as mp4
 
 ### Manual
-- Install requirements
+- Install Matplotlib and Celluloid(if not already installed)
+`pip install celluloid`
+`pip install matplotlib`
 
-`pip install -r requirements.txt`
+- Install ImageMagick or ffmpeg(optional)
 
 - Run main.py
 
 `python main.py`
 
-- Select Data size(default 30)
-- Select the algorithm(defaut is quicksort)
-- Select the type of graph(defaut bar graph)
-- Choose if you want to save
+1. Select Data size(default 30)
+2. Select the algorithm(defaut is quicksort)
+3. Select the type of graph(defaut bar graph)
+4. Choose if you want to save
 

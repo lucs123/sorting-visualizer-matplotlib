@@ -1,7 +1,9 @@
 import random
+import math
 from quicksort import quickSort
 from bubblesort import bubbleSort
 from heapsort import heapSort
+from introsort import introSort
 from animate import camera, alg_title, graph_title, graphs
 import matplotlib.pyplot as plt
 
@@ -14,9 +16,10 @@ data = random.sample(range(data_size), data_size)
 
 algorithms = {'1': bubbleSort,
               '2': quickSort,
-              '3': heapSort}
+              '3': heapSort,
+              '4': introSort}
 
-alg = input('Select the algorithm(1 for bubbleSort, 2 for quickSort, 3 for heapSort):')
+alg = input('Select the algorithm(1 for bubbleSort, 2 for quickSort, 3 for heapSort, 4 for introSort):')
 if alg not in algorithms:
     alg = '2'
 
@@ -35,6 +38,8 @@ func = algorithms[alg]
 
 if func == quickSort:
     func(data, 0, len(data) - 1)
+elif func == introSort:
+    func(data, 0, len(data) - 1, 2 * int(math.log2(len(data))))
 elif func == bubbleSort or heapSort:
     func(data)
 

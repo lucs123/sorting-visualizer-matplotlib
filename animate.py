@@ -7,7 +7,8 @@ comparisons = 0
 
 titles = {'1': "Bubblesort algorithm",
           '2': 'Quicksort algorithm',
-          '3': 'Heapsort algorithm'}
+          '3': 'Heapsort algorithm', 
+          '4': 'Introsort algorithm'}
 
 graphs = {'1': plt.bar,
           '2': plt.scatter}

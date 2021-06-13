@@ -12,6 +12,7 @@ Scripts to visualize sorting algorithms using matplotlib animations
 - Bubble sort
 - Quick sort
 - Heap sort
+- Intro sort
 
 ## About
 The aim of this project is to make sorting algorithms easier to visualize and understand, using the animation capabilities of matplotlib.  
